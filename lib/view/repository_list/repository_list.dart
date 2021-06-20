@@ -14,47 +14,80 @@ class RepositoryList extends StatefulWidget {
 }
 
 class _RepositoryList extends State<RepositoryList> {
+  String _searchWord = 'flutter';
+  final int _page = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildUserList('flutter', 1),
-    );
+        appBar: AppBar(
+          title: TextField(
+              controller: TextEditingController(text: _searchWord),
+              decoration: InputDecoration.collapsed(
+                hintText: ' Search by name',
+              ),
+              onChanged: (value) {
+                debugPrint('input: $value');
+                _searchWord = value;
+              },
+              cursorColor: Colors.grey[100]),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                _search();
+              },
+            )
+          ],
+        ),
+        body: _buildRepositoryList(_searchWord, _page));
   }
 
-  Widget _buildUserList(String searchKeyword, int page) {
+  void _search() async {
+    setState(() {});
+  }
+
+  Widget _buildRepositoryList(String searchWord, int page) {
     final _repository = GitHubRepositoryRepository.instance;
 
     return FutureBuilder(
       // future属性で非同期処理を書く
-      future: _repository.repositories(searchKeyword, page),
+      future: _repository.repositories(searchWord, page),
       builder: (context, snapshot) {
-        // エラーが発生した場合はエラーダイアログを表示する
-        if (snapshot.hasError) {
-          debugPrint('エラーあり');
-          return buildErrorDialog(context, snapshot.error);
-        }
+        if (snapshot.connectionState == ConnectionState.done) {
+          if (snapshot.hasData) {
+            // 取得できたらそれにしたがってViewを表示する
+            debugPrint('ロード完了');
+            Repositories data = snapshot.data as Repositories;
 
-        // 取得完了するまで別のWidgetを表示する
-        if (!snapshot.hasData) {
-          debugPrint('ロード中');
-          return buildLoadingView;
-        }
-
-        // 取得できたらそれにしたがってViewを表示する
-        debugPrint('ロード完了');
-        Repositories data = snapshot.data as Repositories;
-
-        return ListView.builder(
-            itemBuilder: (context, index) {
-              final item = data.items[index];
-              return RepositoryCard(
-                item,
-                () {
-                  print('リポジトリタップ index: $index');
+            return ListView.builder(
+                itemBuilder: (context, index) {
+                  final item = data.items[index];
+                  return RepositoryCard(
+                    item,
+                    () {
+                      print('リポジトリタップ index: $index');
+                    },
+                  );
                 },
-              );
-            },
-            itemCount: data.items.length);
+                itemCount: data.items.length);
+          } else {
+            // エラーが発生した場合はエラーダイアログを表示する
+            if (snapshot.hasError) {
+              debugPrint('エラーあり');
+              return buildErrorDialog(context, snapshot.error);
+            }
+          }
+        } else {
+          // 取得完了するまで別のWidgetを表示する
+          if (!snapshot.hasData) {
+            debugPrint('ロード中（初回）');
+            return buildLoadingView;
+          }
+        }
+        debugPrint('ロード中（非初回）');
+        // 取得完了するまで別のWidgetを表示する
+        return buildLoadingView;
       },
     );
   }
