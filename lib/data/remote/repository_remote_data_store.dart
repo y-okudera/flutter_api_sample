@@ -1,18 +1,19 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_api_sample/domain/model/user.dart';
+import 'package:flutter_api_sample/domain/model/repositories.dart';
 
-class UserRemoteDataStore {
-  UserRemoteDataStore._();
+class RepositoryRemoteDataStore {
+  RepositoryRemoteDataStore._();
 
-  static final instance = UserRemoteDataStore._();
+  static final instance = RepositoryRemoteDataStore._();
 
   final _baseUrl = 'https://api.github.com';
   final _dio = Dio();
 
-  /// ユーザーリストを取得する
-  Future<List<User>> users(int since) async {
-    final _url = '$_baseUrl/users?since=$since&per_page=100';
+  /// リポジトリリストを取得する
+  Future<Repositories> repositories(String searchKeyword, int page) async {
+    final _url =
+        '$_baseUrl/search/repositories?q=$searchKeyword+in:name&sort=stars&per_page=100&page=$page';
 
     try {
       final _response = await _dio.get(
@@ -30,8 +31,7 @@ class UserRemoteDataStore {
         ),
       );
       if (_response.statusCode == 200) {
-        final List jsonList = _response.data;
-        return jsonList.map((json) => User.fromJson(json)).toList();
+        return Repositories.fromJson(_response.data);
       } else {
         debugPrint('Status code: ${_response.statusCode}');
         throw 'Status code: ${_response.statusCode}';

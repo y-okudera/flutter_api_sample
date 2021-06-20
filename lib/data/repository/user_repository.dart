@@ -7,6 +7,10 @@ class UserRepository {
   static final instance = UserRepository._();
 
   Future<List<User>> users(int since) async {
-    return UserRemoteDataStore.instance.users(since);
+    try {
+      return UserRemoteDataStore.instance.users(since);
+    } catch (e) {
+      rethrow;
+    }
   }
 }
