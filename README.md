@@ -4,10 +4,10 @@ Flutter Web API request.
 
 ## Images
 
-|Android|iOS|
-|:--:|:--:|
-|![android](https://user-images.githubusercontent.com/25205138/122260802-a59db500-cf0e-11eb-95dc-e124cfa437af.png)|![ios](https://user-images.githubusercontent.com/25205138/122260818-aa626900-cf0e-11eb-89e4-a224bcb09376.png)|
-
+|Screen|Android|iOS|
+|:--:|:--:|:--:|
+|ユーザー一覧|![android-users](https://user-images.githubusercontent.com/25205138/122803686-e710d480-d301-11eb-86de-e0da67aab1e3.png)|![ios-users](https://user-images.githubusercontent.com/25205138/122803570-bcbf1700-d301-11eb-96ad-cc52e329a55c.png)|
+|リポジトリ一覧|![android-repositories](https://user-images.githubusercontent.com/25205138/122803697-eb3cf200-d301-11eb-9fe3-c053ec6b9324.png)|![ios-repositories](https://user-images.githubusercontent.com/25205138/122803591-c2b4f800-d301-11eb-9f72-9e5533acf315.png)|
 
 ## freezed_annotation
 
