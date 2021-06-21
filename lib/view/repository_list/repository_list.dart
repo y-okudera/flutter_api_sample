@@ -3,6 +3,7 @@ import 'package:flutter_api_sample/domain/model/repositories.dart';
 import 'package:flutter_api_sample/data/repository/github_repository_repository.dart';
 import 'package:flutter_api_sample/view/common/future_error_dialog.dart';
 import 'package:flutter_api_sample/view/common/loading_view.dart';
+import 'package:flutter_api_sample/view/common/searchable_app_bar.dart';
 
 import 'components/repository_card.dart';
 
@@ -20,31 +21,13 @@ class _RepositoryList extends State<RepositoryList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: TextField(
-              controller: TextEditingController(text: _searchWord),
-              decoration: InputDecoration.collapsed(
-                hintText: ' Search by name',
-              ),
-              onChanged: (value) {
-                debugPrint('input: $value');
-                _searchWord = value;
-              },
-              cursorColor: Colors.grey[100]),
-          actions: [
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                _search();
-              },
-            )
-          ],
-        ),
+        appBar: SearchableAppBar(
+            'GitHub Repositories', _searchWord, ' Search by name', (value) {
+          _searchWord = value;
+          // do search
+          setState(() {});
+        }),
         body: _buildRepositoryList(_searchWord, _page));
-  }
-
-  void _search() async {
-    setState(() {});
   }
 
   Widget _buildRepositoryList(String searchWord, int page) {
