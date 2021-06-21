@@ -14,10 +14,14 @@ class UserList extends StatefulWidget {
 }
 
 class _UserList extends State<UserList> {
+  int _since = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildUserList(0),
+      appBar: AppBar(
+        title: Text('GitHub Users'),
+      ),
+      body: _buildUserList(_since),
     );
   }
 
