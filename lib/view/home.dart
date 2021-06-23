@@ -22,7 +22,10 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pageList[_selectedIndex],
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _pageList,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
