@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_sample/domain/model/repository_item.dart';
+import 'package:flutter_api_sample/domain/model/repo_item.dart';
 
 class RepositoryCard extends StatefulWidget {
-  final RepositoryItem item;
+  final RepoItem item;
   final void Function()? onTap;
   RepositoryCard(this.item, this.onTap);
 

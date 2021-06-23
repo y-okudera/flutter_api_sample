@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_sample/domain/model/repositories.dart';
-import 'package:flutter_api_sample/data/repository/github_repository_repository.dart';
+import 'package:flutter_api_sample/domain/model/repo_items.dart';
+import 'package:flutter_api_sample/data/repository/github_repo_repository.dart';
 import 'package:flutter_api_sample/view/common/future_error_dialog.dart';
 import 'package:flutter_api_sample/view/common/loading_view.dart';
 import 'package:flutter_api_sample/view/common/searchable_app_bar.dart';
@@ -31,7 +31,7 @@ class _RepositoryList extends State<RepositoryList> {
   }
 
   Widget _buildRepositoryList(String searchWord, int page) {
-    final _repository = GitHubRepositoryRepository.instance;
+    final _repository = GitHubRepoRepository.instance;
 
     return FutureBuilder(
       // future属性で非同期処理を書く
@@ -41,7 +41,7 @@ class _RepositoryList extends State<RepositoryList> {
           if (snapshot.hasData) {
             // 取得できたらそれにしたがってViewを表示する
             debugPrint('ロード完了');
-            Repositories data = snapshot.data as Repositories;
+            RepoItems data = snapshot.data as RepoItems;
 
             return ListView.builder(
                 itemBuilder: (context, index) {

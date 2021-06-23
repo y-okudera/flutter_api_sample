@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'repository_item.dart';
+part of 'repo_item.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RepositoryItem _$_$_RepositoryItemFromJson(Map<String, dynamic> json) {
-  return _$_RepositoryItem(
+_$_RepoItem _$_$_RepoItemFromJson(Map<String, dynamic> json) {
+  return _$_RepoItem(
     fullName: json['full_name'] as String,
     htmlUrl: json['html_url'] as String,
     stargazersCount: json['stargazers_count'] as int,
@@ -16,7 +16,7 @@ _$_RepositoryItem _$_$_RepositoryItemFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_RepositoryItemToJson(_$_RepositoryItem instance) =>
+Map<String, dynamic> _$_$_RepoItemToJson(_$_RepoItem instance) =>
     <String, dynamic>{
       'full_name': instance.fullName,
       'html_url': instance.htmlUrl,

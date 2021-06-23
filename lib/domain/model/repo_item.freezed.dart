@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'repository_item.dart';
+part of 'repo_item.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,21 +12,21 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-RepositoryItem _$RepositoryItemFromJson(Map<String, dynamic> json) {
-  return _RepositoryItem.fromJson(json);
+RepoItem _$RepoItemFromJson(Map<String, dynamic> json) {
+  return _RepoItem.fromJson(json);
 }
 
 /// @nodoc
-class _$RepositoryItemTearOff {
-  const _$RepositoryItemTearOff();
+class _$RepoItemTearOff {
+  const _$RepoItemTearOff();
 
-  _RepositoryItem call(
+  _RepoItem call(
       {@JsonKey(name: 'full_name') required String fullName,
       @JsonKey(name: 'html_url') required String htmlUrl,
       @JsonKey(name: 'stargazers_count') required int stargazersCount,
       String? description,
       String? language}) {
-    return _RepositoryItem(
+    return _RepoItem(
       fullName: fullName,
       htmlUrl: htmlUrl,
       stargazersCount: stargazersCount,
@@ -35,16 +35,16 @@ class _$RepositoryItemTearOff {
     );
   }
 
-  RepositoryItem fromJson(Map<String, Object> json) {
-    return RepositoryItem.fromJson(json);
+  RepoItem fromJson(Map<String, Object> json) {
+    return RepoItem.fromJson(json);
   }
 }
 
 /// @nodoc
-const $RepositoryItem = _$RepositoryItemTearOff();
+const $RepoItem = _$RepoItemTearOff();
 
 /// @nodoc
-mixin _$RepositoryItem {
+mixin _$RepoItem {
   @JsonKey(name: 'full_name')
   String get fullName => throw _privateConstructorUsedError;
   @JsonKey(name: 'html_url')
@@ -57,15 +57,14 @@ mixin _$RepositoryItem {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RepositoryItemCopyWith<RepositoryItem> get copyWith =>
+  $RepoItemCopyWith<RepoItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RepositoryItemCopyWith<$Res> {
-  factory $RepositoryItemCopyWith(
-          RepositoryItem value, $Res Function(RepositoryItem) then) =
-      _$RepositoryItemCopyWithImpl<$Res>;
+abstract class $RepoItemCopyWith<$Res> {
+  factory $RepoItemCopyWith(RepoItem value, $Res Function(RepoItem) then) =
+      _$RepoItemCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'full_name') String fullName,
       @JsonKey(name: 'html_url') String htmlUrl,
@@ -75,13 +74,12 @@ abstract class $RepositoryItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RepositoryItemCopyWithImpl<$Res>
-    implements $RepositoryItemCopyWith<$Res> {
-  _$RepositoryItemCopyWithImpl(this._value, this._then);
+class _$RepoItemCopyWithImpl<$Res> implements $RepoItemCopyWith<$Res> {
+  _$RepoItemCopyWithImpl(this._value, this._then);
 
-  final RepositoryItem _value;
+  final RepoItem _value;
   // ignore: unused_field
-  final $Res Function(RepositoryItem) _then;
+  final $Res Function(RepoItem) _then;
 
   @override
   $Res call({
@@ -117,11 +115,9 @@ class _$RepositoryItemCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$RepositoryItemCopyWith<$Res>
-    implements $RepositoryItemCopyWith<$Res> {
-  factory _$RepositoryItemCopyWith(
-          _RepositoryItem value, $Res Function(_RepositoryItem) then) =
-      __$RepositoryItemCopyWithImpl<$Res>;
+abstract class _$RepoItemCopyWith<$Res> implements $RepoItemCopyWith<$Res> {
+  factory _$RepoItemCopyWith(_RepoItem value, $Res Function(_RepoItem) then) =
+      __$RepoItemCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'full_name') String fullName,
@@ -132,15 +128,13 @@ abstract class _$RepositoryItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RepositoryItemCopyWithImpl<$Res>
-    extends _$RepositoryItemCopyWithImpl<$Res>
-    implements _$RepositoryItemCopyWith<$Res> {
-  __$RepositoryItemCopyWithImpl(
-      _RepositoryItem _value, $Res Function(_RepositoryItem) _then)
-      : super(_value, (v) => _then(v as _RepositoryItem));
+class __$RepoItemCopyWithImpl<$Res> extends _$RepoItemCopyWithImpl<$Res>
+    implements _$RepoItemCopyWith<$Res> {
+  __$RepoItemCopyWithImpl(_RepoItem _value, $Res Function(_RepoItem) _then)
+      : super(_value, (v) => _then(v as _RepoItem));
 
   @override
-  _RepositoryItem get _value => super._value as _RepositoryItem;
+  _RepoItem get _value => super._value as _RepoItem;
 
   @override
   $Res call({
@@ -150,7 +144,7 @@ class __$RepositoryItemCopyWithImpl<$Res>
     Object? description = freezed,
     Object? language = freezed,
   }) {
-    return _then(_RepositoryItem(
+    return _then(_RepoItem(
       fullName: fullName == freezed
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
@@ -177,16 +171,16 @@ class __$RepositoryItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RepositoryItem implements _RepositoryItem {
-  const _$_RepositoryItem(
+class _$_RepoItem implements _RepoItem {
+  const _$_RepoItem(
       {@JsonKey(name: 'full_name') required this.fullName,
       @JsonKey(name: 'html_url') required this.htmlUrl,
       @JsonKey(name: 'stargazers_count') required this.stargazersCount,
       this.description,
       this.language});
 
-  factory _$_RepositoryItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_RepositoryItemFromJson(json);
+  factory _$_RepoItem.fromJson(Map<String, dynamic> json) =>
+      _$_$_RepoItemFromJson(json);
 
   @override
   @JsonKey(name: 'full_name')
@@ -204,13 +198,13 @@ class _$_RepositoryItem implements _RepositoryItem {
 
   @override
   String toString() {
-    return 'RepositoryItem(fullName: $fullName, htmlUrl: $htmlUrl, stargazersCount: $stargazersCount, description: $description, language: $language)';
+    return 'RepoItem(fullName: $fullName, htmlUrl: $htmlUrl, stargazersCount: $stargazersCount, description: $description, language: $language)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _RepositoryItem &&
+        (other is _RepoItem &&
             (identical(other.fullName, fullName) ||
                 const DeepCollectionEquality()
                     .equals(other.fullName, fullName)) &&
@@ -239,25 +233,24 @@ class _$_RepositoryItem implements _RepositoryItem {
 
   @JsonKey(ignore: true)
   @override
-  _$RepositoryItemCopyWith<_RepositoryItem> get copyWith =>
-      __$RepositoryItemCopyWithImpl<_RepositoryItem>(this, _$identity);
+  _$RepoItemCopyWith<_RepoItem> get copyWith =>
+      __$RepoItemCopyWithImpl<_RepoItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RepositoryItemToJson(this);
+    return _$_$_RepoItemToJson(this);
   }
 }
 
-abstract class _RepositoryItem implements RepositoryItem {
-  const factory _RepositoryItem(
+abstract class _RepoItem implements RepoItem {
+  const factory _RepoItem(
       {@JsonKey(name: 'full_name') required String fullName,
       @JsonKey(name: 'html_url') required String htmlUrl,
       @JsonKey(name: 'stargazers_count') required int stargazersCount,
       String? description,
-      String? language}) = _$_RepositoryItem;
+      String? language}) = _$_RepoItem;
 
-  factory _RepositoryItem.fromJson(Map<String, dynamic> json) =
-      _$_RepositoryItem.fromJson;
+  factory _RepoItem.fromJson(Map<String, dynamic> json) = _$_RepoItem.fromJson;
 
   @override
   @JsonKey(name: 'full_name')
@@ -274,6 +267,6 @@ abstract class _RepositoryItem implements RepositoryItem {
   String? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RepositoryItemCopyWith<_RepositoryItem> get copyWith =>
+  _$RepoItemCopyWith<_RepoItem> get copyWith =>
       throw _privateConstructorUsedError;
 }

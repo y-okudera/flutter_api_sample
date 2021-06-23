@@ -2,10 +2,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_api_sample/domain/model/user.dart';
 
-class UserRemoteDataStore {
-  UserRemoteDataStore._();
+class GitHubUserRemoteDataSource {
+  GitHubUserRemoteDataSource._();
 
-  static final instance = UserRemoteDataStore._();
+  static final instance = GitHubUserRemoteDataSource._();
 
   final _baseUrl = 'https://api.github.com';
   final _dio = Dio();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api_sample/domain/model/user.dart';
-import 'package:flutter_api_sample/data/repository/user_repository.dart';
+import 'package:flutter_api_sample/data/repository/github_user_repository.dart';
 import 'package:flutter_api_sample/view/common/loading_view.dart';
 import 'package:flutter_api_sample/view/common/future_error_dialog.dart';
 
@@ -26,7 +26,7 @@ class _UserList extends State<UserList> {
   }
 
   Widget _buildUserList(int since) {
-    final _repository = UserRepository.instance;
+    final _repository = GitHubUserRepository.instance;
 
     return FutureBuilder(
       // future属性で非同期処理を書く
