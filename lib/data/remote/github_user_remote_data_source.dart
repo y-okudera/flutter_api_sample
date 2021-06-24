@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_api_sample/domain/model/user.dart';
+import 'package:flutter_api_sample/domain/models/user.dart';
 
 class GitHubUserRemoteDataSource {
   GitHubUserRemoteDataSource._();

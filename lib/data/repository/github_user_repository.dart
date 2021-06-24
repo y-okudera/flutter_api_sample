@@ -1,5 +1,5 @@
 import 'package:flutter_api_sample/data/remote/github_user_remote_data_source.dart';
-import 'package:flutter_api_sample/domain/model/user.dart';
+import 'package:flutter_api_sample/domain/models/user.dart';
 
 class GitHubUserRepository {
   GitHubUserRepository._();

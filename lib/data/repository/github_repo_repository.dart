@@ -1,5 +1,5 @@
 import 'package:flutter_api_sample/data/remote/github_repo_remote_data_source.dart';
-import 'package:flutter_api_sample/domain/model/repo_items.dart';
+import 'package:flutter_api_sample/domain/models/repo_items.dart';
 
 class GitHubRepoRepository {
   GitHubRepoRepository._();

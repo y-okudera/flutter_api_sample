@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_sample/domain/model/repo_items.dart';
+import 'package:flutter_api_sample/domain/models/repo_items.dart';
 import 'package:flutter_api_sample/data/repository/github_repo_repository.dart';
-import 'package:flutter_api_sample/view/common/future_error_dialog.dart';
-import 'package:flutter_api_sample/view/common/loading_view.dart';
-import 'package:flutter_api_sample/view/common/searchable_app_bar.dart';
-import 'package:flutter_api_sample/view/web_view/web_view.dart';
+import 'package:flutter_api_sample/widgets/future_error_dialog/future_error_dialog.dart';
+import 'package:flutter_api_sample/widgets/loading_view/loading_view.dart';
+import 'package:flutter_api_sample/widgets/searchable_app_bar/searchable_app_bar.dart';
+import 'package:flutter_api_sample/widgets/web_view/web_view.dart';
+import 'package:flutter_api_sample/screens/repo_list/components/repo_card.dart';
 
-import 'components/repository_card.dart';
-
-class RepositoryList extends StatefulWidget {
-  const RepositoryList({Key? key}) : super(key: key);
+class RepoList extends StatefulWidget {
+  const RepoList({Key? key}) : super(key: key);
 
   @override
-  _RepositoryList createState() => _RepositoryList();
+  _RepoListState createState() => _RepoListState();
 }
 
-class _RepositoryList extends State<RepositoryList> {
+class _RepoListState extends State<RepoList> {
   String _searchWord = 'flutter';
   final int _page = 1;
 
@@ -28,10 +27,10 @@ class _RepositoryList extends State<RepositoryList> {
           // do search
           setState(() {});
         }),
-        body: _buildRepositoryList(_searchWord, _page));
+        body: _buildRepoList(_searchWord, _page));
   }
 
-  Widget _buildRepositoryList(String searchWord, int page) {
+  Widget _buildRepoList(String searchWord, int page) {
     final _repository = GitHubRepoRepository.instance;
 
     return FutureBuilder(
@@ -47,7 +46,7 @@ class _RepositoryList extends State<RepositoryList> {
             return ListView.builder(
                 itemBuilder: (context, index) {
                   final item = data.items[index];
-                  return RepositoryCard(
+                  return RepoCard(
                     item,
                     () {
                       debugPrint('リポジトリタップ index: $index url: ${item.htmlUrl}');

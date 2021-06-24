@@ -1,4 +1,4 @@
-import 'package:flutter_api_sample/domain/model/repo_item.dart';
+import 'package:flutter_api_sample/domain/models/repo_item.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 

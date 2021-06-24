@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api_sample/common/app_theme.dart';
-import 'package:flutter_api_sample/domain/model/user.dart';
-import 'package:flutter_api_sample/view/home.dart';
+import 'package:flutter_api_sample/domain/models/user.dart';
+import 'package:flutter_api_sample/screens/home/home.dart';
 
 void main() {
   // freezedのデバッグ

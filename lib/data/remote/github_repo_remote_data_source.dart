@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_api_sample/domain/model/repo_items.dart';
+import 'package:flutter_api_sample/domain/models/repo_items.dart';
 
 class GitHubRepoRemoteDataSource {
   GitHubRepoRemoteDataSource._();

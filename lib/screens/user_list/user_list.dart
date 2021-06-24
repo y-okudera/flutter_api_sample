@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_sample/domain/model/user.dart';
+import 'package:flutter_api_sample/domain/models/user.dart';
 import 'package:flutter_api_sample/data/repository/github_user_repository.dart';
-import 'package:flutter_api_sample/view/common/loading_view.dart';
-import 'package:flutter_api_sample/view/common/future_error_dialog.dart';
-
-import 'components/user_list_tile.dart';
+import 'package:flutter_api_sample/widgets/loading_view/loading_view.dart';
+import 'package:flutter_api_sample/widgets/future_error_dialog/future_error_dialog.dart';
+import 'package:flutter_api_sample/screens/user_list/components/user_list_tile.dart';
 
 class UserList extends StatefulWidget {
   const UserList({Key? key}) : super(key: key);

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_sample/domain/model/repo_item.dart';
+import 'package:flutter_api_sample/domain/models/repo_item.dart';
 
-class RepositoryCard extends StatefulWidget {
+class RepoCard extends StatefulWidget {
   final RepoItem item;
   final void Function()? onTap;
-  RepositoryCard(this.item, this.onTap);
+  RepoCard(this.item, this.onTap);
 
   @override
-  _RepositoryCardState createState() => _RepositoryCardState();
+  _RepoCardState createState() => _RepoCardState();
 }
 
-class _RepositoryCardState extends State<RepositoryCard> {
+class _RepoCardState extends State<RepoCard> {
   @override
   Widget build(BuildContext context) {
     return Card(

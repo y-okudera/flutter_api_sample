@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_sample/view/user_list/user_list.dart';
-import 'package:flutter_api_sample/view/repository_list/repository_list.dart';
+import 'package:flutter_api_sample/screens/user_list/user_list.dart';
+import 'package:flutter_api_sample/screens/repo_list/repo_list.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   // 表示するWidgetの一覧
   static List<Widget> _pageList = [
     UserList(),
-    RepositoryList(),
+    RepoList(),
   ];
 
   @override

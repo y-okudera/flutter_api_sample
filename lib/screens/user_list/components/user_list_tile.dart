@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_sample/domain/model/user.dart';
+import 'package:flutter_api_sample/domain/models/user.dart';
 
 class UserListTile extends StatefulWidget {
   final User user;
