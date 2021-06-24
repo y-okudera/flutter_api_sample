@@ -4,6 +4,7 @@ import 'package:flutter_api_sample/data/repository/github_repo_repository.dart';
 import 'package:flutter_api_sample/view/common/future_error_dialog.dart';
 import 'package:flutter_api_sample/view/common/loading_view.dart';
 import 'package:flutter_api_sample/view/common/searchable_app_bar.dart';
+import 'package:flutter_api_sample/view/web_view/web_view.dart';
 
 import 'components/repository_card.dart';
 
@@ -49,7 +50,12 @@ class _RepositoryList extends State<RepositoryList> {
                   return RepositoryCard(
                     item,
                     () {
-                      print('リポジトリタップ index: $index');
+                      debugPrint('リポジトリタップ index: $index url: ${item.htmlUrl}');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => WebViewScreen(item.htmlUrl),
+                          ));
                     },
                   );
                 },

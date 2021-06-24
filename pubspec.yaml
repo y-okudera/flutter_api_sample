@@ -33,6 +33,7 @@ dependencies:
   freezed_annotation: ^0.14.2
   json_serializable: ^4.1.3
   dio: ^4.0.0
+  webview_flutter: ^2.0.8
 
 dev_dependencies:
   # パッケージを追加
